@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #25d3cd;
-    --text-color:#a30f0f;
-    --bg-color: #075B5E;
-    --card-bg: #0a2f6f;
-    --paragraph-color: #e0c51c;
+    --primary-color: #725CAD;
+    --text-color:#8CCDEB;
+    --bg-color: #182221;
+    --card-bg: #725CAD;
+    --paragraph-color: #f0efe5;
 }
 
 
@@ -17,8 +17,18 @@
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: background-color 0.3s, color 0.3s;
+    cursor: none ; /* Hide default cursor */
+
+}
+
+h2 {
+  font-size: 2.5rem;         /* Adjust size */
+  font-weight: bold;         /* Make it bold */
+ 
+  text-transform: uppercase; /* All uppercase */
+  letter-spacing: 2px;       /* Space between letters */
+  text-align: center;        /* Center the text */
+  margin-bottom: 20px;       /* Add space below */
 }
 
 .cursor {
@@ -40,7 +50,9 @@ body {
 }
 
 header {
-    margin-bottom: 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -52,10 +64,11 @@ nav {
 
 
 .hero {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    min-height: 70vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .hero-content {
@@ -79,6 +92,14 @@ h2 {
     text-align: center;
 }
 
+#typewriter {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    width: fit-content;
+    border-right: 5px solid var(--primary-color);
+    animation: blink 0.75s step-end infinite;
+}
+
 p {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -86,13 +107,62 @@ p {
 
 
 }
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers inner content horizontally */
+  justify-content: center; /* Optional: use with min-height for vertical centering */
+  padding: 4rem 2rem;
+ 
+}
+  b {
+    color: #725CAD;         /* Change text color */
+    font-weight: bold;      /* Make sure it's bold (default for <strong>) */
+    text-transform: uppercase; /* Make it uppercase */
+    letter-spacing: 1px;    /* Add spacing between letters */
+    font-size: 1.1rem;      /* Slightly increase size */
+  }
 
-#aboutText{
-    background: rgba(255, 255, 255, 0.001); /* semi-transparent background */
-    backdrop-filter: blur(4px);          /* ⬅️ this creates the blur effect */
-    -webkit-backdrop-filter: blur(4px);  /* for Safari support */
-    padding: 1rem;
-    border-radius: 10px;
+.about-wrapper {
+  display: flex;
+  align-items: center; /* Align top of image and text */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about_icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_icon img {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about_text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 3;
+  text-align: justify;
+  word-spacing: 4px;
+  color: #333;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about_icon img {
+    width: 200px;
+  }
 }
 
 #contact {
@@ -113,11 +183,32 @@ p {
 
 .project-card {
     background: var(--card-bg);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     transition: transform 0.3s;
 }
 
+.project_title{
+ text-align: center;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+}
+
+.project-content img {
+  flex: 2;             /* 2 parts for image */
+  max-width: 100px;    /* Optional: control image size */
+  height: auto;
+}
+
+.project-content p {
+  flex: 5;             /* 5 parts for text */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
 .project-card:hover {
     transform: translateY(-5px);
 }
@@ -184,12 +275,9 @@ section {
 }
 
 body {
-    background-image: url('../Assets/ChatGPT\ Image\ May\ 26\,\ 2025\,\ 04_49_12\ PM-Picsart-AiImageEnhancer.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* optional: creates a nice parallax feel */
-    min-height: 100vh;
+background: #000000;
+background: -webkit-linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
+background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
 }
 
 
@@ -221,11 +309,21 @@ body {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    padding-left: 70px;
+    padding-right: 40px;
+   
+  background-color: #e3e3e3d7; /* light gray background */
+  padding: 0.75rem 1.5rem;   /* spacing inside */
+  border: 10px solid #725CAD;    /* dark custom border */
+  border-top-left-radius: 300px;  
+  border-bottom-right-radius: 300px;     /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--bg-color);
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -234,12 +332,6 @@ body {
     color: var(--primary-color);
 }
 
-#darkModeToggle {
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
 
 
 

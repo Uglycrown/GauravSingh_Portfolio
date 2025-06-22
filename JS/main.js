@@ -107,7 +107,7 @@ function createDrop() {
   icon.textContent = icons[Math.floor(Math.random() * icons.length)];
   icon.style.left = Math.random() * 100 + 'vw';
   icon.style.animationDuration = 2 + Math.random() * 3 + 's';
-  icon.style.fontSize = 9 + Math.random() * 24 + 'px';
+  icon.style.fontSize = 9 + Math.random() * 50 + 'px';
   container.appendChild(icon);
 
   setTimeout(() => {
