@@ -40,13 +40,15 @@ h2 {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: all 0.1s ease;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .portfolio-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 header {
@@ -186,6 +188,8 @@ p {
     padding: 1rem;
     border-radius: 0.5rem;
     transition: transform 0.3s;
+    position: relative;
+    z-index: 1;
 }
 
 .project_title{
@@ -291,7 +295,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    z-index: 1000;
+    z-index: 50000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -389,6 +393,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 99999999;
 }
 
 .hamburger span {
@@ -396,6 +401,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
   height: 3px;
   background-color: black;
   border-radius: 2px;
+  z-index: 999999;
 }
 
 /* Responsive styles */
@@ -413,19 +419,22 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
   }
   
   .hamburger {
-    order: 3;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    z-index: 2100;
+    z-index: 999999 !important;
     background: none;
     border: none;
-    margin-right: 0;
-    margin-left: auto;
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    transform: none !important;
+    margin: 0 !important;
+    order: unset !important;
   }
   
   .nav-links {
@@ -439,7 +448,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     gap: 1rem;
-    z-index: 2000;
+    z-index: 50000;
     border: 2px solid #725CAD;
     order: 2;
   }
