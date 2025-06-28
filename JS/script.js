@@ -107,7 +107,17 @@ function createDrop() {
   icon.textContent = icons[Math.floor(Math.random() * icons.length)];
   icon.style.left = Math.random() * 100 + 'vw';
   icon.style.animationDuration = 2 + Math.random() * 3 + 's';
-  icon.style.fontSize = 9 + Math.random() * 50 + 'px';
+  
+  // Check if mobile screen (768px or below)
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    // Smaller size for mobile: 8px to 25px
+    icon.style.fontSize = 8 + Math.random() * 15 + 'px';
+  } else {
+    // Original size for desktop: 9px to 59px
+    icon.style.fontSize = 9 + Math.random() * 50 + 'px';
+  }
+  
   container.appendChild(icon);
 
   setTimeout(() => {
@@ -115,7 +125,7 @@ function createDrop() {
   }, 5000);
 }
 
-// create new drops every 200ms
+// create new drops every 350ms
 setInterval(createDrop, 350);
 
 
