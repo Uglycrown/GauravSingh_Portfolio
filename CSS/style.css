@@ -468,3 +468,53 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     transform: rotate(-45deg) translate(6px, -6px);
 }
 }
+
+/* Mobile Typography Adjustments */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Reduced from 3.5rem to h2 size */
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem; /* Reduced from 3rem to h3 size */
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Adjust typewriter text size for mobile */
+  #typewriter {
+    font-size: 1.8rem;
+  }
+
+  
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* Even smaller for very small screens */
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  #typewriter {
+    font-size: 1.5rem;
+  }
+}
