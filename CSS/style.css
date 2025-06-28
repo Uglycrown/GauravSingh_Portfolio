@@ -384,22 +384,6 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
 }
 
 /* Default styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 1000;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-
-/* Hamburger styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -440,7 +424,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     z-index: 2100;
     background: none;
     border: none;
-    margin-right: 0.5rem;
+    margin-right: 0;
     margin-left: auto;
   }
   
@@ -449,7 +433,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;
+    right: 0.5rem;
     background-color: #222;
     padding: 1rem 2rem;
     border-radius: 8px;
