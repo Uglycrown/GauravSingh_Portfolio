@@ -312,7 +312,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     padding-left: 70px;
     padding-right: 40px;
    
-  background-color: #e3e3e3d7; /* light gray background */
+  background-color: #060606d7; /* light gray background */
   padding: 0.75rem 1.5rem;   /* spacing inside */
   border: 10px solid #725CAD;    /* dark custom border */
   border-top-left-radius: 300px;  
@@ -323,7 +323,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
 
 .nav-links a {
     text-decoration: none;
-    color: var(--bg-color);
+    color: var(--paragraph-color);
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -381,4 +381,90 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     .hero-animation {
         order: -1;
     }
+}
+
+/* Default styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    padding: 1rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #222;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    z-index: 2000;
+    border: 2px solid #725CAD;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2100;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #725CAD;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
 }

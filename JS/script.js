@@ -117,3 +117,26 @@ function createDrop() {
 
 // create new drops every 200ms
 setInterval(createDrop, 350);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+    // Accessibility: allow Enter/Space to toggle
+    hamburger.tabIndex = 0;
+    hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      }
+    });
+  }
+});
+
