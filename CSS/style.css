@@ -278,6 +278,19 @@ section {
   transition: background-color 0.3s ease;
 }
 
+/* Mobile responsive memory game */
+@media screen and (max-width: 768px) {
+  #memory-game {
+    gap: 8px;
+    max-width: 280px;
+  }
+  
+  .memory-card {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 body {
 background: #000000;
 background: -webkit-linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
