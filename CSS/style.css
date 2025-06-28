@@ -399,9 +399,10 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: #ef125a;
   border-radius: 2px;
-  z-index: 999999;
+  z-index: 9999999 !important;
+  position: relative;
 }
 
 /* Responsive styles */
@@ -416,6 +417,8 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     order: 1;
     flex: 0 0 auto;
     margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
   }
   
   .hamburger {
@@ -430,7 +433,7 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
     background: none;
     border: none;
     position: fixed !important;
-    top: 20px !important;
+    top: 35px !important;
     right: 20px !important;
     transform: none !important;
     margin: 0 !important;
@@ -460,11 +463,13 @@ background: linear-gradient(to right, #1e1e1e, #000000, #1e1e1e);
   .hamburger span {
     width: 30px;
     height: 4px;
-    background-color: #725CAD;
+    background-color: #ef125a;
     margin: 4px 0;
     border-radius: 2px;
     transition: all 0.3s ease;
     display: block;
+    z-index: 9999999 !important;
+    position: relative;
   }
   
   .hamburger.open span:nth-child(1) {
